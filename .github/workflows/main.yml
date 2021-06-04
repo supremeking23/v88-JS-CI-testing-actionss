@@ -16,7 +16,6 @@ jobs:
               run: npm install
             - name: Hello world action step
               id: hello
-              uses: supremeking23/v88-JS-CI-testing-actionss@v1
               with:
                   who-to-greet: "Ivan"
             - name: time of action
