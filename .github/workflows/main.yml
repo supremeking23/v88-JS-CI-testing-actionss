@@ -1,15 +1,18 @@
-on: [push]
-
+name: Github Actions Example
+on:
+    push:
+        branches:
+            - master
 jobs:
-    hello_world_job:
+    build:
+        name: Build simple project
         runs-on: ubuntu-latest
-        name: A job to say hello
         steps:
-            - name: Hello world action step
-              id: hello
-              uses: supremeking23/v88-JS-CI-testing-actionss
-              with:
-                  who-to-greet: "Ivan "
-            # Use the output from the `hello` step
-            - name: Get the output time
-              run: echo "The time was ${{ steps.hello.outputs.time }}"
+            - name: Checkout project
+              uses: actions/checkout@v2
+            - name: Use Node.js
+              uses: actions/setup-node@v1
+            - name: Install dependencies
+              run: npm install
+            - name: Test project
+              run: npm test
