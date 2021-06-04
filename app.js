@@ -13,6 +13,8 @@ class Algorithm {
 		return arr;
 	}
 
+	// something
+
 	celciusToFahrenheit(cDegrees) {
 		let Fahrenheit = (9 / 5) * cDegrees + 32;
 		return Fahrenheit;
