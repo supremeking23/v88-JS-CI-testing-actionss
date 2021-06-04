@@ -34,6 +34,16 @@ describe("Sum 4", function () {
 	});
 });
 
+describe("Sum 4", function () {
+	it("Returns the sum of the two numbers passed as its arguments.", function () {
+		let num1 = 1;
+		let num2 = 3;
+		let expected_sum = 4;
+		let result = test_algorithm.sum(num1, num2);
+		expect(result).to.equal(expected_sum);
+	});
+});
+
 // #2.1
 
 describe("Celcius to Fahrenheit", function () {
