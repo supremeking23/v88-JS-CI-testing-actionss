@@ -1,0 +1,12 @@
+name: Github Actions Example
+on:
+    pull_request:
+        branches:
+            - main
+jobs:
+    build:
+        name: Pull request Trigger
+        runs-on: ubuntu-latest
+        steps:
+            - name: who issue the pull request
+              run: echo "Pull request by other user"
