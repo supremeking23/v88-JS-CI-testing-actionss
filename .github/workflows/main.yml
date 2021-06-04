@@ -14,10 +14,6 @@ jobs:
               uses: actions/setup-node@v1
             - name: Install dependencies
               run: npm install
-            - name: Hello world action step
-              id: hello
-              with:
-                  who-to-greet: "Ivan"
             - name: time of action
               run: echo "The time was ${{ steps.hello.outputs.time }}"
             - name: Test project
