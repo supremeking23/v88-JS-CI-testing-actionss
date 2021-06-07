@@ -60,6 +60,7 @@ class Algorithm {
 			factor *= i;
 		}
 		return factor;
+		//comment
 	}
 
 	swapTowardCenter(arr) {
